@@ -53,15 +53,22 @@ function App() {
 
   useEffect( () => {
     setLoading(true)
-    fetchAndSetJokes()
+
+   
     fetch('https://api.icndb.com/categories').
     then( res => res.json()).then(res =>{
+      var checkedb=document.getElementById("checkedbox");
+     
+ 
+   
       setCategories(res.value);
       setFilterCategories(res.value)
       setLoading(false)
     })
     .catch(err   => console.log(err))
+  
   },[]);
+  
 
 const fetchAndSetJokes = ()=>{
   fetch( `https://api.icndb.com/jokes?firstName=${firstName}&lastName=${lastName}`).then(
@@ -126,12 +133,15 @@ useEffect(()=>{
 const toggleCategory = (event)=> {
   const category = event.target.name
   if(filterCategories.includes(category)){
+  
     const filterCategoriesCopy = [...filterCategories]
  const categoryIndex = filterCategoriesCopy.indexOf(category)
   filterCategoriesCopy.splice(categoryIndex, 1)
   setFilterCategories(filterCategoriesCopy)
+  fetchAndSetJokes()
   }
   else{
+   
     setFilterCategories([...filterCategories,category])
   }
 }
@@ -150,6 +160,7 @@ const changeJokes = (e) =>{
   fetchAndSetJokes()
 
 }
+
  
 
   return (
@@ -189,21 +200,23 @@ const changeJokes = (e) =>{
         </form>
 
        </div>
+      
         {categories.map(category=>(
           <FormControlLabel key={category} control={<Checkbox
-          name={category} color="primary" 
-          checked={filterCategories.includes(category) } style={{background:'#f1f0ea',marginBottom:7}}onChange ={toggleCategory}/>}
+          name={category} color="primary" id="checkedbox"
+          checked={filterCategories.includes(category)} style={{background:'#a6a59b',marginBottom:7}}   onClick ={toggleCategory}/>}
           label={category}/>
-
-        
-        ))}
+       ))}
+       <Typography variant="h6" align="center" style={{marginTop:'50px',fontFamily:'Roboto'}}>
+         Check or Uncheck the checkboxes to view jokes
+       </Typography>
       {jokeToShow.map((joke,index) =>{
         if (joke.categories.length === 0 || categoryMatch(joke.categories)){
         return(
         <JCard key={joke.id } 
         joke={joke} 
         likeJoke={likeJoke}
-         unlikeJoke={unlikeJoke} index={index}/>
+         unlikeJoke={unlikeJoke} index={index} />
       );
         }
       })}
