@@ -15,7 +15,13 @@ const myStyles=makeStyles({
       margin:20,
       width:'25ch',
     },
+    tab: {
+      '&:hover': {
+        background: '#efefef'
+      }
+    }
   },
+  
 
 });
 function Spinner(){
@@ -146,22 +152,23 @@ const changeJokes = (e) =>{
  
 
   return (
-    <div className="App">
+    <div className="App" style={{background:'#dfdcd3'}}>
 
       <CssBaseline/>
         <Container>
-        <Typography variant="h3" align="center" style={{marginTop:'50px'}}>
+        <Typography variant="h3" align="center" style={{marginTop:'50px',fontFamily:'Roboto'}}>
         Apprenticeship Program Test
       </Typography>
-      <AppBar style={{marginBottom:10}}>
+      <AppBar style={{marginBottom:10,background:'#246e43'}}>
       <Tabs value={ currentTab} onChange={changeTab}>
-        <Tab label="Home" id="home-tab" aria-controls="home-panel"/>
+        <Tab label="Home" id="home-tab" aria-controls="home-panel" className={classes.Tab}/>
         <Tab label={
           <Badge
           color="secondary"
+         
           badgeContent={
             likedJokes.length > 0 ? likedJokes.length: null
-          }>
+          } >
             Likes
           </Badge>
         } id="like-tab" aria-controls="like-panel"/>
@@ -174,14 +181,14 @@ const changeJokes = (e) =>{
           onChange={ e => setFirstName (e.target.value)}/>
            <TextField id ="lastName"  label = "Last value" value={lastName  }
           onChange={ e => setLastName (e.target.value)}/>
-<Button type="submit" variant="contained" color="primary">submit</Button>
+<Button type="submit" variant="contained" color="primary" style={{background:'#229653'}}>submit</Button>
         </form>
 
        </div>
         {categories.map(category=>(
           <FormControlLabel key={category} control={<Checkbox
           name={category} color="primary" 
-          checked={filterCategories.includes(category) } onChange ={toggleCategory}/>}
+          checked={filterCategories.includes(category) } style={{background:'#af8f20',marginBottom:7}}onChange ={toggleCategory}/>}
           label={category}/>
 
         
