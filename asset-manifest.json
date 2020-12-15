@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/JapprentishipTest/static/js/main.fb1d60a7.chunk.js",
-    "main.js.map": "/JapprentishipTest/static/js/main.fb1d60a7.chunk.js.map",
+    "main.js": "/JapprentishipTest/static/js/main.364ad5d9.chunk.js",
+    "main.js.map": "/JapprentishipTest/static/js/main.364ad5d9.chunk.js.map",
     "runtime-main.js": "/JapprentishipTest/static/js/runtime-main.944415fd.js",
     "runtime-main.js.map": "/JapprentishipTest/static/js/runtime-main.944415fd.js.map",
     "static/js/2.292b8d09.chunk.js": "/JapprentishipTest/static/js/2.292b8d09.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.944415fd.js",
     "static/js/2.292b8d09.chunk.js",
-    "static/js/main.fb1d60a7.chunk.js"
+    "static/js/main.364ad5d9.chunk.js"
   ]
 }
