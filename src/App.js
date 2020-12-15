@@ -160,9 +160,9 @@ const changeJokes = (e) =>{
         <Typography variant="h3" align="center" style={{marginTop:'50px',fontFamily:'Roboto'}}>
         Apprenticeship Program Test
       </Typography>
-      <Typography variant="p" align="center" style={{marginTop:'5px',fontFamily:'Roboto',color:'#1e99f8',padding:'10px'}}>
+      <a variant="a"  href="mailto:brianmurithi65@gmail.com" align="center" style={{marginTop:'5px',fontFamily:'Roboto',color:'#1e99f8',padding:'10px',cursor:'pointer',textDecoration:'none'}}>
        For brianmurithi65@gmail.com
-      </Typography>
+      </a>
       <AppBar style={{marginBottom:10,background:'#246e43'}}>
       <Tabs value={ currentTab} onChange={changeTab}>
         <Tab label="Home" id="home-tab" aria-controls="home-panel" className={classes.Tab}/>
