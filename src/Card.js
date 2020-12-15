@@ -45,8 +45,8 @@ export default function JCard({joke,likeJoke,unlikeJoke,index }){
   </Typography>
 </CardContent>
 <CardActions className={classes.cardActions}>
-  <Button variant="contained" color="primary" onClick= {() => likeJoke(joke.id)}>Like</Button>
-  <Button variant="contained" color="default"  onClick= {() => unlikeJoke(joke.id)}>Unlike</Button>
+  <Button variant="contained" color="primary"style={{background:'#0481d9'}} onClick= {(e) =>{ likeJoke(joke.id)}}>Like</Button>
+  <Button variant="contained" color="primary" style={{background:'#908787'}} onClick= {() => unlikeJoke(joke.id)}>Unlike</Button>
 </CardActions>
 </Card>
     )

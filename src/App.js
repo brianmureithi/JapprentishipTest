@@ -26,8 +26,8 @@ const myStyles=makeStyles({
 });
 function Spinner(){
   return (
-    <div style={{textAlign:'center',padding:'2rem'}}>
-      <CircularProgress/>
+    <div style={{textAlign:'center',padding:'2rem',color:'#1c1818'}}>
+      <  CircularProgress  />
     </div>
   )
 }
@@ -62,6 +62,7 @@ function App() {
     })
     .catch(err   => console.log(err))
   },[]);
+
 const fetchAndSetJokes = ()=>{
   fetch( `https://api.icndb.com/jokes?firstName=${firstName}&lastName=${lastName}`).then(
     (res) => res.json()
@@ -158,6 +159,9 @@ const changeJokes = (e) =>{
         <Container>
         <Typography variant="h3" align="center" style={{marginTop:'50px',fontFamily:'Roboto'}}>
         Apprenticeship Program Test
+      </Typography>
+      <Typography variant="p" align="center" style={{marginTop:'5px',fontFamily:'Roboto',color:'#1e99f8',padding:'10px'}}>
+       For brianmurithi65@gmail.com
       </Typography>
       <AppBar style={{marginBottom:10,background:'#246e43'}}>
       <Tabs value={ currentTab} onChange={changeTab}>
