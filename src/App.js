@@ -160,7 +160,7 @@ const changeJokes = (e) =>{
         <Typography variant="h3" align="center" style={{marginTop:'50px',fontFamily:'Roboto'}}>
         Apprenticeship Program Test
       </Typography>
-      <a variant="a"  href="mailto:brianmurithi65@gmail.com" align="center" style={{marginTop:'5px',fontFamily:'Roboto',color:'#1e99f8',padding:'10px',cursor:'pointer',textDecoration:'none'}}>
+      <a variant="a"  href="mailto:brianmurithi65@gmail.com" align="center" style={{marginTop:'5px',fontFamily:'Arvo',color:'#1e99f8',padding:'10px',cursor:'pointer',textDecoration:'none'}}>
        For brianmurithi65@gmail.com
       </a>
       <AppBar style={{marginBottom:10,background:'#246e43'}}>
@@ -192,7 +192,7 @@ const changeJokes = (e) =>{
         {categories.map(category=>(
           <FormControlLabel key={category} control={<Checkbox
           name={category} color="primary" 
-          checked={filterCategories.includes(category) } style={{background:'#af8f20',marginBottom:7}}onChange ={toggleCategory}/>}
+          checked={filterCategories.includes(category) } style={{background:'#f1f0ea',marginBottom:7}}onChange ={toggleCategory}/>}
           label={category}/>
 
         
